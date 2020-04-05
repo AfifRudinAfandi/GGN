@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dashbord</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome Icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Custom Css -->
+  <link href="../static/css/app.css" rel="stylesheet"/>
+  <link href="../static/css/dashboard.css" rel="stylesheet"/>
+  
+</head>
+<body>
+    <div class="image-top"></div>
+    <div class="content">
+        <div class="flex-2 ml-3">
+            <div class="wrapp-ic mr-3">
+                <img src="../static/images/ic-voucher.svg" alt="">
+            </div>
+            <div class="wrapp-desc">
+                <p>Welcome,</p>
+                <p>Voucher Code</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="flex-2 just mb-3">
+                    <div class="desc">
+                        <p class="call">Call Center</p>
+                        <p class="phone">+62 81xx xxxx xxxx</p>
+                    </div>
+                    <div class="wrapp-logo">
+                        <img class="logo" src="../static/images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="flex-2 just mb-3">
+                    <div class="progress" data-value='80'>
+                        <span class="progress-left">
+                            <span class="progress-bar border-progres"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar border-progres"></span>
+                        </span>
+                        <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                            <p class="title">Unlimited</p>
+                        </div>
+                    </div>
+                    <div class="wrapp-ct-quota">
+                        <p class="quota">Super Unlimited</p>
+                        <p class="quota-price">Rp.1.300.000,-</p>
+                    </div>
+                </div>
+                <div class="flex-2 just mb-3">
+                    <div class="col-left">
+                        <p class="time"><i class="fas fa-clock mr-2"></i>Sisa Waktu</p>
+                        <p class="time-2"><span>14h</span> : <span>15m</span> : <span>30s</span></p>
+                    </div>
+                    <div class="col-right">
+                        <p class="time"><i class="fas fa-home"></i><i class="ic-2 mr-2 fas fa-map-marker-alt"></i>Address</p>
+                        <p class="time-2">192.168.1.100</p>
+                    </div>
+                </div>
+                <div class="flex-2 ">
+                    <button type="button" class="btn btn-info lanjut mx-auto">Lanjut Browsing</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex-wrapp mb-5">
+            <div class="flex-2 eve">
+                <a href="logout.html"class="btn btn-light logout"><i class="fas fa-power-off mr-2"></i>Log Out</a>
+                <a href="#"class="btn btn-light refresh"><i class="fas fa-sync-alt mr-2"></i>Refresh</a>
+            </div>
+        </div>
+        <div class="banner-wrapper mb-5">
+            <img src="../static/images/banner-3.jpg" width="100%" alt="" class="banner">
+            <a href="#" class="close"><img src="../static/images/close.svg" alt=""></a>
+        </div>
+    </div>
+      
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script>
+    $(function() {
+
+$(".progress").each(function() {
+
+  var value = $(this).attr('data-value');
+  var left = $(this).find('.progress-left .progress-bar');
+  var right = $(this).find('.progress-right .progress-bar');
+
+  if (value > 0) {
+    if (value <= 50) {
+      right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+    } else {
+      right.css('transform', 'rotate(180deg)')
+      left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+    }
+  }
+
+})
+
+function percentageToDegrees(percentage) {
+
+  return percentage / 100 * 360
+
+}
+
+});
+
+</script>
+</body>
+</html>

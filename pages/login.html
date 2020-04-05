@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign In</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome Icon -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Custom Css -->
+  <link href="../static/css/app.css" rel="stylesheet"/>
+  <link href="../static/css/login.css" rel="stylesheet"/>
+  
+</head>
+<body>
+    <section class="content">
+        <div class="wrapper">
+            <a href="../index.html" class="ic-back"><i class="fas fa-arrow-left"></i></a>
+            <h5 class="welcome">Welcome,</h5>
+            <p class="desc">Masukkan Username dan password.</p>
+            <form>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********">
+                </div>
+                <a href="dashboard.html" class="btn btn-info signin">Sign In</a>
+            </form>
+            <p class="more">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            
+            <div class="row rw-test mb-2">
+                <button type="button" class="btn btn-outline-info mt-1 btn-test" data-toggle="modal" data-target="#error-mac">
+                    mac address error
+                </button>
+                <button type="button" class="btn btn-outline-info mt-1 btn-test" data-toggle="modal" data-target="#error-user">
+                    username error
+                </button>
+                <button type="button" class="btn btn-outline-info mt-1 btn-test" data-toggle="modal" data-target="#error-pass">
+                    password error
+                </button>
+                <button type="button" class="btn btn-outline-info mt-1 btn-test" data-toggle="modal" data-target="#error-voucher">
+                    voucher expired
+                </button>
+                <button type="button" class="btn btn-outline-info mt-1 btn-test" data-toggle="modal" data-target="#error-ar">
+                    voucher already use
+                </button>
+            </div>
+
+            <div class="banner-wrapper">
+                <img src="../static/images/banner.png" width="100%" alt="" class="banner">
+                <a href="#" class="close"><img src="../static/images/close.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    
+  
+  <!-- Modal MAC-->
+  <div class="modal fade"  id="error-mac" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img src="../static/images/red-close.svg" alt="">
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="../static/images/mac.svg" alt="">
+            <h5 class="error-mac">Error Mac Address</h5>
+            <p class="error-desc">Estabiling Connecttion, please check again your connection!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal USERNAME-->
+    <div class="modal fade"  id="error-user" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <img src="../static/images/red-close.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="../static/images/user.svg" alt="">
+                <h5 class="error-mac">Error Username</h5>
+                <p class="error-desc">Please enter the correct username to login.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal Password-->
+    <div class="modal fade"  id="error-pass" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <img src="../static/images/red-close.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="../static/images/pass.svg" alt="">
+                <h5 class="error-mac">Error Password</h5>
+                <p class="error-desc">Please enter the correct password to login.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Voucher Expired-->
+    <div class="modal fade"  id="error-voucher" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <img src="../static/images/red-close.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="../static/images/voucher.svg" alt="">
+                <h5 class="error-vc">Voucher Expired</h5>
+                <p class="error-desc">Please enter the correct voucher to login.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+       <!-- Modal Voucher Alraady Use-->
+    <div class="modal fade"  id="error-ar" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <img src="../static/images/red-close.svg" alt="">
+              </button>
+            </div>
+            <div class="modal-body">
+                <img src="../static/images/ready-use.svg">
+                <h5 class="error-mac">Voucher Already Use</h5>
+                <p class="error-desc">Please enter the correct voucher to login.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

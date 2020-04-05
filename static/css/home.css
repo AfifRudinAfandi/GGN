@@ -1,0 +1,69 @@
+.carousel-item .overlay img{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: relative;
+}
+.carousel-item .overlay{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 77.68%);
+}
+.signin{
+    width: 320px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background-color: #01BBA6;
+    border-radius: 4px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.carousel-caption{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    left: 0;
+}
+.carousel-caption .wrapper{
+    max-width: 320px;
+}
+.carousel-caption .wrapper h5{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 45px;
+    color: #01BBA6;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.carousel-caption .wrapper P{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 200px;
+}
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.carousel-indicators{
+    bottom: 120px;
+}
+.button-wrapper{
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+}
