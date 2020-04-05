@@ -84,7 +84,7 @@
         </div>
         <div class="banner-wrapper mb-5">
             <img src="../static/images/banner-3.jpg" width="100%" alt="" class="banner">
-            <a href="#" class="close"><img src="../static/images/close.svg" alt=""></a>
+            <button onclick="hideandshow()" class="close"><img src="../static/images/close.svg" alt=""></button>
         </div>
     </div>
       
@@ -121,5 +121,10 @@ function percentageToDegrees(percentage) {
 });
 
 </script>
+<script>
+    function hideandshow(){      
+        $(".banner-wrapper").addClass("hide-panel");
+      }
+  </script>
 </body>
 </html>

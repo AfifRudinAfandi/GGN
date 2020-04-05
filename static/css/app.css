@@ -1,3 +1,9 @@
 * {
   font-family: 'Roboto', sans-serif;
  }
+ .hide-panel{
+   opacity: 0;
+ }
+ .btn-info {
+  border-color: #01bba6;
+}

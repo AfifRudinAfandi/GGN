@@ -1,5 +1,5 @@
 .content{ 
-    height: auto;
+    min-height: 100vh;
     width: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, #000000 77.68%),url("../images/bg-4.jpg");
     background-size: cover;
@@ -50,6 +50,7 @@
     /* position: absolute; */
     /* bottom: 6vh; */
     max-width: 320px;
+    transition: all 0.1s ease-in-out;
 }
 .close{
     position: absolute;
